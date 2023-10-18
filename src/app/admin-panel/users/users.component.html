@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr class="thead">
+            <th style="padding-left: 24px; width: 820px;" scope="col">Наименование</th>
+            <th scope="col">Статус</th>
+            <th scope="col">роль</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of allUser">
+            <td class="tdUser">
+                <img class="userImg" [src]="user.image" alt="">
+                <div style="margin: auto 0;">{{user.fullName}}
+                    <p class="loginName">{{user.username}}</p>
+                </div>
+            </td>
+            <td><button disabled class="status">Активен</button></td>
+            <td><p class="role">{{user.role}}</p></td>
+            <td><button class="edit">Редактировать</button></td>
+        </tr>
+    </tbody>
+</table> 

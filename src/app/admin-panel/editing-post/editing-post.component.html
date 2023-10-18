@@ -1,0 +1,248 @@
+<main>
+    <p class="title">Редактирование рецепта: {{postServ.post.title}}</p>
+    <p class="inf">Основная информация</p>
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+    
+    <div class="inputTypeOne">
+        <p>Название рецепта</p>
+        <div style="position: relative;">
+            <input 
+                type="text" 
+                [(ngModel)]="postServ.post.title" 
+                #nameRec="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': nameRec.invalid && (nameRec.dirty || nameRec.touched) || nameRec.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': nameRec.invalid && (nameRec.dirty || nameRec.touched) || nameRec.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+    
+    <div class="inputTypeTwo">
+        <p>Краткое описание</p>
+        <div style="position: relative;">
+            <div class="text">
+                <textarea 
+                    [(ngModel)]="postServ.post.body" 
+                    #body="ngModel"
+                    required
+                    minlength="1"
+                    [ngClass]="{'is-invalid': body.invalid && (body.dirty || body.touched) || body.hasError('minlength')}"
+                    name="" id="" cols="30" rows="10"
+                ></textarea>
+                <p>Опишите о чем ваш рецепт</p>            
+            </div>
+
+            <label class="imgError" [ngClass]="{'errorImg': body.invalid && (body.dirty || body.touched) || body.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <p>Основная информация</p>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Категория</p>
+        <div style="position: relative;">
+            <input 
+                type="text"
+                [(ngModel)]="postServ.post.tags" 
+                #category="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': category.invalid && (category.dirty || category.touched) || category.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': category.invalid && (category.dirty || category.touched) || category.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Время приготовления</p>
+        <div style="position: relative;">
+            <input 
+                type="number"
+                [(ngModel)]="postServ.post.timeCooking"
+                placeholder="в минутах"
+                #time="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': time.invalid && (time.dirty || time.touched) || time.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': time.invalid && (time.dirty || time.touched) || time.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeOne">
+        <p>Первый ингридиент</p>
+        <div style="position: relative;">
+            <input
+            type="text" 
+            [(ngModel)]="one && one[0]"
+            #ferstIng="ngModel"
+            required
+            minlength="1"
+            [ngClass]="{'is-invalid': ferstIng.invalid && (ferstIng.dirty || ferstIng.touched) || ferstIng.hasError('minlength')}"
+        >
+            <label class="imgError" [ngClass]="{'errorImg2': ferstIng.invalid && (ferstIng.dirty || ferstIng.touched) || ferstIng.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeOne">
+        <p>Белки</p>
+        <div style="position: relative;">
+            <input 
+                type="number" 
+                [(ngModel)]="valuess.belki" 
+                #belki="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': belki.invalid && (belki.dirty || belki.touched) || belki.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': belki.invalid && (belki.dirty || belki.touched) || belki.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Жиры</p>
+        <div style="position: relative;">
+            <input 
+                type="number" 
+                [(ngModel)]="valuess.fats" 
+                #fats="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': fats.invalid && (fats.dirty || fats.touched) || fats.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': fats.invalid && (fats.dirty || fats.touched) || fats.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Углеводы</p>
+        <div style="position: relative;">
+            <input 
+                type="number" 
+                [(ngModel)]="valuess.carbohydrates" 
+                #carbohydrates="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': carbohydrates.invalid && (carbohydrates.dirty || carbohydrates.touched) || carbohydrates.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': carbohydrates.invalid && (carbohydrates.dirty || carbohydrates.touched) || carbohydrates.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Калории</p>
+        <div style="position: relative;">
+            <input 
+                type="number" 
+                [(ngModel)]="valuess.calories" 
+                #calories="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': calories.invalid && (calories.dirty || calories.touched) || calories.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': calories.invalid && (calories.dirty || calories.touched) || calories.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <p class="inf">Детальная информация</p>
+    <p class="detail">Детально опишите первый шаг вашего рецепта</p>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeThree">
+        <p>Краткое действие первого шага</p>
+        <div style="position: relative;">
+            <input 
+                type="text" 
+                [(ngModel)]="oneShagTitle" 
+                #ShagTitle="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': ShagTitle.invalid && (ShagTitle.dirty || ShagTitle.touched) || ShagTitle.hasError('minlength')}"
+            >
+            <label class="imgError" [ngClass]="{'errorImg2': ShagTitle.invalid && (ShagTitle.dirty || ShagTitle.touched) || ShagTitle.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label> 
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+    <div class="inputTypeTwo">
+        <p>Описание первого шага</p>
+        <div style="position: relative;">
+            <textarea 
+                name="" id="" cols="30" rows="10"
+                type="text" 
+                [(ngModel)]="oneShagBody" 
+                #ShagBody="ngModel"
+                required
+                minlength="1"
+                [ngClass]="{'is-invalid': ShagBody.invalid && (ShagBody.dirty || ShagBody.touched) || ShagBody.hasError('minlength')}"
+            >
+            </textarea>      
+            <label class="imgError" [ngClass]="{'errorImg': ShagBody.invalid && (ShagBody.dirty || ShagBody.touched) || ShagBody.hasError('minlength')}" >
+                <img src="../../assets/error.svg" alt="">
+            </label>    
+        </div>
+    </div>
+
+    <hr align="center" width="100%" size="1" color="#E5E7EB"/>
+
+
+    <button [disabled]="
+        nameRec.invalid ||
+        body.invalid ||
+        category.invalid ||
+        time.invalid ||
+        ferstIng.invalid ||
+        belki.invalid ||
+        fats.invalid ||
+        carbohydrates.invalid ||
+        calories.invalid ||
+        ShagTitle.invalid ||
+        ShagBody.invalid" 
+        (click)="editpost()" routerLink="/admin/recipes"><img style="padding: 0 12px 3px 0;" src="../../../assets/Mail.svg" alt="">Редактировать этот рецепт</button>
+</main>
+
+
+

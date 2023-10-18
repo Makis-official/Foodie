@@ -1,0 +1,199 @@
+<app-header></app-header>
+
+<ngb-toast *ngIf="tost" style="position: fixed; z-index: 10; top: 10px; right: 10px; padding: 2px 5px;" [delay]="3000" [autohide]="true">
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; column-gap: 12px;">
+            <img style="margin-top: 1px; width: 18px; height: 18px;" src="../../assets/comoleteSub.svg" alt="">
+            <div class="subNotification">
+                <p class="TitleSubNot">Добавлено в избранное</p>   
+                <p class="descSubNot">Сохранили этот рецепт для вас</p> 
+            </div>
+        </div>
+        <button (click)="close()" type="button" aria-label="Close" class="btn-close"></button>
+    </div>  
+</ngb-toast> 
+
+<ng-template #template>
+  <div class="modal-body">
+
+    <div class="modalContent">
+        <img src="../../assets/warning.svg" alt="">
+
+        <div class="modalContent_text">
+            <p class="modalContent_text_title">Поделиться этим рецептом?</p>
+            <p class="modalContent_text_body">Вы хотите поделиться этим рецептом со всеми?</p>
+        </div> 
+    </div>
+
+    <div class="modal_buttons">
+        <button type="button" class="btn_close" (click)="confirm()">Закрыть</button>
+        <button type="button" class="btn_share" (click)="decline()">Поделиться</button>
+    </div>
+
+  </div>
+</ng-template>
+
+<div style="width: 1280px; margin: 0 auto 0;">
+    <div class="mainInfTop">
+        <div class="leftInf">
+            <h1 class="title">{{AllInfOneRecept?.title}}</h1>
+
+            <div class="leftBottomInf">
+                <div class="user">
+                    <img class="imgUser" [src]="AllInfOneRecept?.user?.image" alt="">
+
+                    <div class="userNameDate">
+                        <p class="userName">{{AllInfOneRecept?.user?.name}}</p>
+                        <p class="userDate">{{AllInfOneRecept?.user?.date | date:"d MMMM y"}}</p>
+                    </div>
+                </div>
+                <img src="../../assets/vertical_line.svg" alt="">
+                <div class="timeInf">
+                    <img style="margin: auto 0;" src="../../assets/Timer.svg" alt="">
+
+                    <div class="descriptionTime">
+                        <p class="descriptionTime_title">ВРЕМЯ ПРИГОТОВЛЕНИЯ</p>
+                        <p>{{AllInfOneRecept?.timeCooking}} минут</p>
+                    </div>
+                </div>
+                <img src="../../assets/vertical_line.svg" alt="">
+                <div class="coocingInf">
+                    <img src="../../assets/ForkKnife.svg" alt="">
+                    <p style="margin: auto 0;">{{AllInfOneRecept?.tags}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="rightButtons">
+            <div class="butPrint">
+                <button class="btnTopBanner" (click)="print()"><img src="../../assets/printer.svg" alt=""></button>
+                <p>РАСПЕЧАТАТЬ</p>
+            </div>
+
+            <div class="butshare">
+                <button class="btnTopBanner" (click)="openModal(template)"><img src="../../assets/share.svg" alt=""></button>
+                <p>ПОДЕЛИТЬСЯ</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainBanner">
+        <img [src]="AllInfOneRecept?.image" alt="">
+
+        <div class="infEatingInf">
+            <p class="infEatingInf_title">Пищевая ценность</p>
+
+            <div class="kgeb">
+                <p class="kgeb_title">Калории</p>
+                <p class="kgeb_inf">{{AllInfOneRecept?.foodValue?.calories}} ккал</p>  
+            </div>
+            <hr width="100%" style="border: 1px solid rgba(0, 0, 0, 0.10);">
+            <div class="kgeb">
+                <p class="kgeb_title">Жиры</p>
+                <p class="kgeb_inf">{{AllInfOneRecept?.foodValue?.fats}} г</p>           
+            </div>
+            <hr width="100%" style="border: 1px solid rgba(0, 0, 0, 0.10);">
+            <div class="kgeb">
+                <p class="kgeb_title">Углеводы</p>
+                <p class="kgeb_inf">{{AllInfOneRecept?.foodValue?.carbohydrates}} г</p>           
+            </div>
+            <hr width="100%" style="border: 1px solid rgba(0, 0, 0, 0.10);">
+            <div class="kgeb">
+                <p class="kgeb_title">Белки</p>
+                <p class="kgeb_inf">{{AllInfOneRecept?.foodValue?.belki}} г</p>
+            </div>
+            <hr width="100%" style="border: 1px solid rgba(0, 0, 0, 0.10);">
+            <p class="znach">Значения приблизительные</p>
+        </div>
+    </div>
+
+    <p class="descriptiobRecepts">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <div class="ingridientsAndThreeRecepts">
+        <div class="ingridients">
+            <p class="ingridients_title">Ингридиенты</p>
+            <p class="ingridients_spisok">Что вам пригодиться</p>
+
+            <div class="ataps" *ngFor="let one of AllInfOneRecept?.additionalInformation?.ingredients; let i = index">
+                <div class="">
+                    <input (click)="onToggle(i)" class="custom-checkbox" type="checkbox" id="check" />
+                    <p [class.completed]="check[i]">{{one}}</p>  
+                </div>
+                <hr style=" margin: 32px 0 32px 0 ; color: rgba(0, 0, 0, 0.10); border: 1px solid rgba(0, 0, 0, 0.10);" width="840px">
+            </div>
+        </div>
+
+        <div class="ThreeRandomRecepts">
+            <p class="ThreeRandomRecepts_title">Прочие рецепты</p>
+
+            <div [routerLink]="['/recipe', rec.id]" class="threerecepts" *ngFor="let rec of ThreePost">
+                <img [src]="rec.image" alt="">
+                <div class="">
+                    <p class="threerecepts_title">{{rec.title}}</p>
+                    <p class="threerecepts_desc">От Lorem Ipsum</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stepsEating">
+        <p class="stepsEating_title">Шаги приготовления</p>
+
+        <div class="stepsEating_infAll" *ngFor="let step of AllInfOneRecept?.additionalInformation?.details; let i = index">
+            <div class="stepsEating_inf">
+                <input style="margin-top: 3px;" (click)="onToggleSteps(i)" class="custom-checkbox" type="checkbox" id="check" />
+                <div class="">
+                    <p [class.completedStepsTitle]="checkSteps[i]" class="stepsEating_inf_title">{{i+1}}. {{step.title}}</p>
+                    <p [class.completedStepsBody]="checkSteps[i]" class="stepsEating_inf_body">{{step.body}}</p>
+                </div>
+            </div>
+            <hr style=" margin: 48px 0 48px 0 ; color: rgba(0, 0, 0, 0.10); border: 1px solid rgba(0, 0, 0, 0.10);" width="840px">
+        </div>
+    </div>
+
+    <div class="FourRcepts">
+        <div class="titleAndDescription">
+            <p class="FourRcepts_title">Возможно вам понравятся эти рецепты</p>
+        </div>
+
+        <div class="fourRandRecepts_cards">
+            <div  class="fourRandRecepts_cards_oneCard" *ngFor="let recepts of FourPost">
+                <button class="btnHeartMiniCard" (click)="subRecept(recepts.id, recepts.title)" *ngIf="serv.colors[recepts.id]"><img class="heartSub" src="../../assets/Heart.svg" alt=""></button>
+                <button class="btnHeartMiniCard" (click)="subRecept(recepts.id, recepts.title)" *ngIf="!serv.colors[recepts.id]"><img class="heartSub" src="../../assets/HeartNoActive.svg" alt=""></button>
+        
+                <div [routerLink]="['/recipe', recepts.id]">
+                    <img class="fourRandRecepts_cards_oneCard_img" [src]="recepts.image" alt="">
+                    <p class="fourRandRecepts_cards_oneCard_title">{{recepts.title}}</p>
+                    <div class="timeAndType">
+                        <div class="time">
+                            <img src="../../assets/Timer.svg" alt="">
+                            <p class="timeType">{{recepts.timeCooking}} минут</p> 
+                        </div>
+                                
+                        <div class="time">
+                            <img src="../../assets/ForkKnife.svg" alt="">
+                            <p class="timeType">{{recepts.tags}}</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="allComments">
+        <p class="comments_title">Комментарии</p>
+
+        <div class="oneComment" *ngFor="let comment of AllInfOneRecept?.comments">
+            <p class="oneComment_name">{{comment.user.username}}</p>
+            <p class="oneComment_date">{{comment.dateCreated | date:"dd.MM.yy hh:mm"}}</p>
+            <p class="oneComment_body">{{comment.body}}</p>
+        </div>
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>
+
+

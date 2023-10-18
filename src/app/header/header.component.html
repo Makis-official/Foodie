@@ -1,0 +1,42 @@
+<header>
+    <h1>Foodie</h1>
+
+    <nav>
+        <ul>
+            <li><a routerLink="/">Главная</a></li>
+            <li><a routerLink="/recipe">Каталог рецептов</a></li>
+        </ul>
+    </nav>
+
+    <ng-container *ngIf="currentAuth.role == undefined">
+        <button class="avtorization" routerLink="/auth">Войти</button>
+    </ng-container>
+    
+    <ng-container *ngIf="currentAuth.role == 'user' || currentAuth.role == 'admin'">
+        <div class="userInfAcc">
+            <img routerLink="/create-recipe" style="margin-right: 34px; cursor: pointer;" src="../assets/settingAccaunt.svg" alt="">
+            <img class="user_img" [src]="currentAuth.image" alt="">
+            <div class="dropdown">
+                <div class="userinf dropbtn">
+                    <p class="userinf_name">{{currentAuth.fullname}}</p>
+                    <p class="userinf_role" *ngIf="currentAuth.role == 'user'">Пользователь</p>
+                    <p class="userinf_role" *ngIf="currentAuth.role == 'admin'">Администратор</p>
+                </div> 
+                <div class="dropdown-content">
+                    <div style="margin-bottom: 12px;">
+                        <p class="content_one">Вы вошли как</p>
+                        <p class="content_two">{{currentAuth.username}}</p>  
+                        <hr>
+                    </div>
+
+                    <p class="content_three">Настройки аккаунта</p>
+                    <p routerLink="/admin" *ngIf="currentAuth.role == 'admin'" class="content_three">Администрирование</p>
+                    <p (click)="resetState()" routerLink="/" class="content_four">Выход</p>
+                </div>
+            </div>
+       
+        </div> 
+    </ng-container>
+    
+</header>
+

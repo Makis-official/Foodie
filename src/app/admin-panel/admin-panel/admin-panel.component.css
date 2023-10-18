@@ -1,0 +1,170 @@
+.afterBtn{     
+    border-bottom: 2px solid #3A3395;
+    color: #3A3395;
+}
+
+button{    
+    color: #6B7280;
+    border-bottom: 1px solid #E5E7EB;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.line{
+    border-bottom: 1px solid #E5E7EB;
+    width: 845px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 40px auto 100px;
+}
+
+h1{
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+    
+}
+
+ul{
+    padding-left: 0px;
+    display: flex;
+    column-gap: 42px;
+    list-style: none;
+}
+
+.avtorization{
+    padding: 9px 17px;
+
+    border-radius: 8px;
+    background: var(--link-color, #3A3395);
+    border: none;
+
+    color: var(--white, #FFF);
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.user_img{
+    margin-right: 17px;
+    width: 41px;
+    border-radius: 41px;
+}
+
+.userInfAcc{
+    display: flex;
+}
+
+.userinf_name{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.userinf_role{
+    color: #909090;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.dropdown-content p{
+    padding-left: 15px;
+}
+
+.dropdown-content{
+    width: 224px;
+    padding: 15px 0 15px 0;
+}
+
+.content_one{
+    color: var(--gray-900, #111827);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.content_two{
+    color: var(--gray-900, #111827);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.content_three{
+    color: var(--gray-700, #374151);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.content_four{
+    color: #BE2D2D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.red {
+    border: 1px solid #BE2D2D;
+}
+
+.btnTabs{
+    display: flex;
+    width: 1280px;
+    margin: 0 auto 0;
+}
+
+
+

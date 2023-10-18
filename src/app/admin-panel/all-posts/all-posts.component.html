@@ -1,0 +1,40 @@
+<ng-template #template>
+    <div class="modal-body">
+  
+      <div class="modalContent">
+          <img src="../../assets/warning.svg" alt="">
+  
+          <div class="modalContent_text">
+              <p class="modalContent_text_title">Удалить этот рецепт?</p>
+              <p class="modalContent_text_body">Вы хотите удалить этот рецепт?</p>
+          </div> 
+      </div>
+  
+      <div class="modal_buttons">
+          <button type="button" class="btn_close" (click)="confirm()">Закрыть</button>
+          <button type="button" class="btn_share" (click)="decline(); deletePost(id)">Удалить</button>
+      </div>
+  
+    </div>
+  </ng-template>
+
+<table class="table tbl_two">
+    <thead>
+        <tr class="thead">
+            <th style="padding-left: 24px; width: 225px;" scope="col">Название рецепта</th>
+            <th scope="col">Краткое описание</th>
+            <th scope="col">ID рецепта</th>
+            <th scope="col">Категория</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let recept of allPost">
+            <td class="receptTitle">{{recept.title}}</td>
+            <td class="receptBody">{{recept.body}}</td>
+            <td class="receptid">{{recept.id}}</td>
+            <td class="receptTags">{{recept.tags}}</td>
+            <td class="receptEdit_td"><div class="receptEdit"><img routerLink="{{recept.id}}" src="../../../assets/pen.svg" alt=""> <img (click)="openModal(template); getId(recept.id)" src="../../../assets/delete.svg" alt=""></div></td>
+        </tr>
+    </tbody>
+</table> 

@@ -1,0 +1,472 @@
+::ng-deep .carousel-control-next{
+    left: 1280px;
+    padding-left: 90px;
+    width: 20px;
+}
+
+::ng-deep .carousel-control-prev{
+    width: 20px;
+    padding-left: 90px;
+    left: -95px;
+}
+
+::ng-deep .carousel-indicators{
+    display: none;
+}
+
+.bigBanner_allInf{
+    background-color: #E7FAFE;
+    padding: 45px 50px;
+    border-radius: 50px 0 0 50px;
+}
+
+.bigBanner{
+    display: flex;
+    
+}
+
+.big_img_banner{
+    object-fit: cover;
+    width: 660px;
+    height: 640px;
+    border-radius: 0 50px 50px 0;
+}
+
+.allInfTitle{
+    width: 520px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -2.4px;
+}
+
+.allInfDescription{
+    width: 520px;
+
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+
+.allInf_timeAndType{
+    display: flex;
+    column-gap: 16px;
+    margin-top: 183px;
+}
+
+.allInf_userAndBtn{
+    display: flex;
+    justify-content: space-between;
+     margin-top: 35px;
+}
+
+.user_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.allInf_user{
+    display: flex;
+    column-gap: 16px;
+     margin: auto 0;
+   
+}
+.user_inf_name{
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-bottom: 8px;
+}
+
+.user_inf_date{
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    margin-bottom: 0;
+}
+
+.allInf_Btn{
+    border-radius: 16px;
+    background: #000;
+    padding: 21px 37px;
+    display: flex;
+    column-gap: 19px;
+    border: none;
+
+    color: white;
+
+}
+
+.Type{
+    padding: 11px 24px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+}
+
+.bestRecepts{
+    width: 1280px;
+    margin: 150px auto 0;
+}
+
+.bestRecepts_description{
+    color: #606060;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    width: 706px;
+
+    margin: 0 auto 0;
+}
+
+.bestRecepts_title{
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.92px;
+}
+
+.bestRecepts_cards{
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 40px;
+
+    margin-top: 68px;
+}
+
+.bestRecepts_cards_oneCard{
+    padding: 16px 16px 32px 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
+
+    position: relative;
+}
+
+.checHeart{
+    position: absolute;
+    padding: 20px 36px 0 0;
+
+    right: 0;
+}
+
+.checHeartFour{
+    position: absolute;
+    padding: 16px 16px 0 0;
+
+    right: 0;
+}
+
+.checkFour{
+    position: absolute;
+    top: 26px;
+    right: 19px;
+}
+
+.check{
+    position: absolute;
+    top: 31px;
+    right: 39px;
+}
+
+.bestRecepts_cards_oneCard_img{
+    z-index: 1;
+    width: 368px;
+    height: 250px;
+    border-radius: 20px;
+
+    margin-bottom: 24px;
+}
+
+.bestRecepts_cards_oneCard_title{
+    width: 352px;
+    height: 64px;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: -0.96px;
+}
+
+
+.timeAndType{
+    display: flex;
+    column-gap: 34px;
+}
+
+.time{
+    display: flex;
+    column-gap: 10px;
+}
+
+.timeType{
+    margin-bottom: 0;
+}
+
+.otherbestRecepts{
+    margin-top: 75px;
+    margin-left: 545px;
+    padding: 13px 25px;
+    
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.FourRcepts{
+    width: 1280px;
+    margin: 150px auto 0;
+}
+
+.titleAndDescription{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    width: 560px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.92px;
+
+    margin-bottom: 0;
+}
+
+.description{
+    width: 620px;
+
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+
+    margin: auto 0;
+}
+
+.fourRandRecepts_cards{
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourRandRecepts_cards_oneCard{
+    cursor: pointer;
+    position: relative;
+    width: 290px;
+}
+
+.fourRandRecepts_cards_oneCard_img{
+    width: 290px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.fourRandRecepts_cards_oneCard_title{
+    width: 100%;
+    height: 52px;
+    margin-top: 16px;
+
+
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    letter-spacing: -0.72px;
+}
+
+.whyWe{
+    
+    margin-top: 150px;
+}
+
+.whyWeTitle{
+    color: var(--gray-900, #111827);
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px; /* 100% */
+}
+
+.whyWeFourColumns{
+    margin: 48px auto 0;
+    width: 1216px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.oneColumns{
+    display: flex;
+    column-gap: 12px;
+}
+
+.oneColumnsDescription{
+    width: 244px;
+}
+
+.oneColumnsImg{
+    height: 24px;
+}
+
+.oneColumnsTitle{
+    color: var(--gray-900, #111827);
+    /* text-lg/leading-6/font-medium */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+}
+
+.oneColumnsDescription{
+    color: var(--gray-500, #6B7280);
+    /* text-base/leading-6/font-normal */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.subscribeEmail{
+    width: 1319px;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 206px auto;
+
+    background-color: #E7F9FD;
+    border-radius: 24px;
+    padding: 80px;
+}
+
+.subscribeEmailDescription{
+    width: 679px;
+}
+
+.subscribeEmailTitle{
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 120% */
+    letter-spacing: -0.75px;
+
+    margin-bottom: 12px;
+}
+
+.inputEmailAndButton{
+    margin: auto 0;
+    display: flex;
+    column-gap: 12px;
+}
+
+.inputEmail{
+    border-radius: 6px;
+    border: 1px solid var(--white, #FFF);
+    background: var(--white, #FFF);
+
+    width: 281px;
+    /* padding: 13px 21px; */
+}
+
+.subscribeBtn{
+    padding: 13px 25px;
+
+    border: none;
+    color: #FFF;
+    border-radius: 6px;
+    background: var(--link-color, #3A3395);
+}
+
+
+
+
+.titleFooterBanner{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.banner{
+    z-index: 10;
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    background-color: #3A3395;
+    height: 64px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.bannerInf{
+    padding: 20px 34px;
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bannerInf div{
+    display: flex;
+    column-gap: 12px;
+}
+
+
+.TitleSubNot{
+    margin-bottom: 0;
+
+    color: var(--gray-900, #111827);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.descSubNot{
+    margin-bottom: 0;
+    font-size: 14px;
+    color: var(--gray-500, #6B7280);
+    font-weight: 400;
+    line-height: 20px;
+}

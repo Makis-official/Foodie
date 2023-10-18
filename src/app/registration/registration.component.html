@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<h1>Зарегистрируйте ваш аккаунт</h1>
+
+<div class="card_avtorization">
+    <div style="position: relative;">
+        <p>Email</p>
+        <input 
+            [ngClass]="{'is-invalid': login.invalid && (login.dirty || login.touched) || login.hasError('pattern')}"
+            type="text" 
+            required
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            style="margin-bottom: 24px;" 
+            placeholder="loginnaim"
+            #login="ngModel"
+            [(ngModel)]="usServ.registrUser.email"
+        >
+        <label class="imgError" [ngClass]="{'errorImg': login.invalid && (login.dirty || login.touched) || login.hasError('minlength')}" >
+            <img src="../../assets/error.svg" alt="">
+        </label>  
+    </div>
+
+    <div style="position: relative;">
+        <p>Пароль</p>
+        <input 
+            [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched) || password.hasError('minlength')}"
+            type="text" 
+            minlength="1"
+            #password="ngModel"
+            required
+            placeholder="password"
+            [(ngModel)]="usServ.registrUser.password"
+        >
+        <label class="imgError" [ngClass]="{'errorImg2': password.invalid && (password.dirty || password.touched) || password.hasError('minlength')}" >
+            <img src="../../assets/error.svg" alt="">
+        </label>          
+    </div>
+    <button routerLink="/" (click)="newUser()" type="submit" [disabled]="login.invalid || password.invalid">Зарегистрироваться</button>
+</div>
+
+<app-footer></app-footer>

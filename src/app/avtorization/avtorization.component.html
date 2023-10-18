@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<h1>Войдите в ваш аккаунт</h1>
+
+<div class="card_avtorization">
+    <div style="position: relative;">
+        <p>Логин</p>
+        <input 
+            [ngClass]="{'is-invalid': login.invalid && (login.dirty || login.touched) || login.hasError('minlength')}"
+            type="text" 
+            style="margin-bottom: 24px;" 
+            placeholder="loginnaim"
+            #login="ngModel"
+            minlength="1"
+            [(ngModel)]="users.userOne.username"
+            required
+        >
+        <label class="imgError" [ngClass]="{'errorImg': login.invalid && (login.dirty || login.touched) || login.hasError('minlength')}" >
+            <img src="../../assets/error.svg" alt="">
+        </label>        
+    </div>
+
+
+    <div style="position: relative;">
+        <p>Пароль</p>
+        <input 
+            [ngClass]="{'is-invalid': password.invalid && (password.dirty || password.touched) || password.hasError('minlength')}"
+            type="text" 
+            minlength="1"
+            #password="ngModel"
+            placeholder="password"
+            required
+            [(ngModel)]="users.userOne.password"
+        >
+        <label class="imgError" [ngClass]="{'errorImg2': password.invalid && (password.dirty || password.touched) || password.hasError('minlength')}" >
+            <img src="../../assets/error.svg" alt="">
+        </label>  
+    </div>
+    <div class="checkAndRegistration">
+        <div class="check">
+            <input type="checkbox" class="checkkk">
+            <p class="checkbox">Запомнить меня</p>
+        </div>
+        <a class="register" routerLink="/register">Зарегистрироваться</a>
+    </div>
+
+    <button [disabled]="login.invalid || password.invalid" type="submit" (click)="getUsers()">Вход</button>
+    <div class="OrString">
+        <hr align="center" width="118px" size="1" color="#D1D5DB" style="margin: auto 0;"/>
+        <p class="OrString_title">Или войти через</p>
+        <hr align="center" width="118px" size="1" color="#D1D5DB" style="margin: auto 0;"/>
+    </div>
+    
+    <button class="github"><img src="../../assets/github.svg" alt=""></button>
+</div>
+
+<app-footer></app-footer>

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Inter', sans-serif;
+    /* width: 1280px; */
+    margin: 0 auto 0;
+}
+
+.btnHeart{
+    margin-top: 20px;
+    margin-left: 74%;
+    position: absolute;
+    z-index: 1001;
+    padding: 13px 14px;
+    border: none;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.btnHeartMiniCard{
+    margin-top: 16px;
+    margin-left: 77%;
+    position: absolute;
+    z-index: 1001;
+    padding: 13px 14px;
+    border: none;
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.heartSub{
+    width: 24px;
+}

@@ -1,0 +1,519 @@
+::ng-deep .modal-body{
+    width: 512px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+::ng-deep .modal-sm{
+    border: none;
+    margin-top: 20.5%;
+    --bs-modal-width: 512px;
+}
+
+.modalContent{
+    display: flex;
+    column-gap: 16px;
+}
+
+.modalContent img{
+    width: 40px;
+    height: 40px;
+}
+
+.modalContent_text_title{
+    color: var(--gray-900, #111827);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.modalContent_text_body{
+    margin-top: 8px;
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.modal_buttons{
+    float: right;
+    margin-top: 28px;
+    display: flex;
+    column-gap: 12px;
+}
+
+.btn_close{
+    
+    padding: 9px 17px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+}
+
+.btn_share{
+    border: none;
+    color: white;
+    padding: 9px 17px;
+    border-radius: 6px;
+    background: var(--link-color, #3A3395);
+}
+
+p{
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
+.mainInfTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    color: #000;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -2.56px;
+    margin-bottom: 48px;
+}
+
+.leftBottomInf{
+    display: flex;
+    column-gap: 50px;
+}
+
+.user{
+    display: flex;
+    column-gap: 16px;
+}
+
+.userNameDate{
+    margin: auto 0;
+}
+
+.imgUser{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.userName{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-bottom: 8px;
+}
+
+.userDate{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
+.timeInf{
+    display: flex;
+    column-gap: 13px;
+}
+
+.coocingInf{
+    display: flex;
+    column-gap: 10px;
+}
+
+.descriptionTime{
+    margin: auto 0;
+}
+
+.descriptionTime_title{
+    margin-bottom: 8px;
+    width: 175px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+.btnTopBanner{
+    background-color: #E7FAFE;
+    border: none;
+    padding: 28px;
+    border-radius: 100px;
+}
+
+.butPrint{
+    text-align: center;
+}
+
+.butshare{
+    text-align: center;
+}
+
+.butPrint p{
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-top: 16px;
+}
+
+.butshare p{
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    margin-top: 16px;
+}
+
+.rightButtons{
+    margin: auto 0;
+    display: flex;
+    column-gap: 46px;
+}
+
+.mainBanner{
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainBanner img{
+    width: 840px;
+    height: 600px;
+    border-radius: 30px;
+}
+
+.infEatingInf{
+    width: 390px;
+    padding: 32px;
+    background-color: #E7FAFE;
+    border-radius: 30px;
+}
+
+.infEatingInf_title{
+    margin-bottom: 24px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.kgeb{
+    display: flex;
+    justify-content: space-between;
+}
+
+.kgeb_title{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.kgeb_inf{
+    color: #000;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.znach{
+    margin-top: 262px;
+    color: rgba(0, 0, 0, 0.60);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.descriptiobRecepts{
+    margin: 80px 0 80px 0;
+}
+
+.ingridients_title{
+    margin-bottom: 48px;
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.44px;
+}
+
+.ingridients_spisok{
+    margin-bottom: 33px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.custom-checkbox {
+    -webkit-appearance: none; /* Remove default appearance */
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #DBE2E5;
+    border-radius: 2px;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 30px;
+
+ }
+ .custom-checkbox:checked::before {
+    content: '\2714'; /* check mark symbol Unicode */
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    color: white;
+    
+ }
+
+ .completed{
+    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.2;
+    text-decoration: line-through;
+}
+
+.completedStepsTitle{
+    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.60);
+    text-decoration: line-through;
+}
+
+.completedStepsBody{
+    text-decoration: line-through;
+}
+
+ .custom-checkbox:checked {
+    border: none;
+    background-color: #3D9A25;  /* Change background color when checked */
+    border-radius: 30px;
+}
+
+.ataps div{
+    display: flex;
+    column-gap: 24px;
+}
+
+.ataps div p{
+    color: #000;
+    margin: auto 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.36px;
+}
+
+.ingridientsAndThreeRecepts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ThreeRandomRecepts_title{
+    margin-bottom: 32px;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.28px;
+}
+
+.threerecepts{
+    cursor: pointer;
+    margin-bottom: 24px;
+    display: flex;
+    column-gap: 24px;
+}
+
+.threerecepts img{
+    width: 180px;
+    height: 120px;
+    border-radius: 20px;
+}
+
+.threerecepts_title{
+    margin: 16px 0 17px 0;
+    width: 196px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.8px;
+}
+
+.threerecepts_desc{
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
+.stepsEating_title{
+    margin: 130px 0 32px 0;
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.44px;
+}
+
+.stepsEating_inf{
+    display: flex;
+    column-gap: 24px;
+}
+
+.stepsEating_inf_title{
+    margin-bottom: 24px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.stepsEating_inf_body{
+    width: 792px;
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px; 
+    letter-spacing: -0.32px;
+}
+
+.FourRcepts{
+    margin-top: 150px;
+}
+
+.titleAndDescription{
+    display: flex;
+    justify-content: space-between;
+}
+
+.FourRcepts_title{
+    margin: 0 auto;
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.44px;
+}
+
+.fourRandRecepts_cards{
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourRandRecepts_cards_oneCard{
+    cursor: pointer;
+    position: relative;
+    width: 290px;
+}
+
+.fourRandRecepts_cards_oneCard_img{
+    width: 290px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.fourRandRecepts_cards_oneCard_title{
+    width: 100%;
+    height: 52px;
+    margin-top: 16px;
+
+
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 144.444% */
+    letter-spacing: -0.72px;
+}
+
+.timeAndType{
+    display: flex;
+    column-gap: 34px;
+}
+
+.time{
+    display: flex;
+    column-gap: 10px;
+}
+
+.timeType{
+    margin-bottom: 0;
+}
+
+.checHeartFour{
+    position: absolute;
+    padding: 16px 16px 0 0;
+
+    right: 0;
+}
+
+.checkFour{
+    position: absolute;
+    top: 26px;
+    right: 19px;
+}
+
+.allComments{
+    margin-bottom: 720px;
+}
+
+.comments_title{
+    margin: 154px 0 60px 0;
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.oneComment{
+    margin-bottom: 30px;
+}
+
+.oneComment_name{
+    color: var(--gray-900, #111827);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; 
+}
+
+.oneComment_date{
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.oneComment_body{
+    margin-top: 5px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}

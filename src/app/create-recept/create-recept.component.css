@@ -1,0 +1,219 @@
+main{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.title{
+    margin-top: 60px;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.inf{
+    margin: 40px 0 20px 0;
+    color: var(--gray-900, #111827);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.inputTypeOne{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 24px;
+}
+
+.inputTypeOne p{
+    margin: auto 0;
+    width: 389px;
+}
+
+.inputTypeOne input{
+    width: 512px;
+    padding: 9px 13px;
+
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.inputTypeTwo{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 24px;
+}
+
+.inputTypeTwo p{
+    margin: auto 0;
+    width: 389px;
+}
+
+.inputTypeTwo textarea{
+    width: 512px;
+    height: 93px;
+    padding: 9px 13px;
+
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.text p{
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.detail{
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.inputTypeThree{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 24px;
+}
+
+.inputTypeThree p{
+    margin: auto 0;
+    width: 389px;
+}
+
+.inputTypeThree input{
+    width: 320px;
+    padding: 9px 13px;
+
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+button{
+    Float: right;
+    padding: 13px 25px 13px 23px;
+    margin-top: 50px;
+    margin-bottom: 159px;
+    border: none;
+    border-radius: 6px;
+    background: var(--link-color, #3A3395);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+    color: var(--white, #FFF);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.is-invalid{
+    border: 1.5px solid red !important;
+}
+
+.file-hiden {
+    display: none;
+}
+
+.inputFile{
+    
+    text-align: center;
+    width: 512px;
+    padding: 22px 0 26px 0;
+    border-radius: 6px;
+    border: 2px dashed var(--gray-300, #D1D5DB);
+}
+
+.uploadString{
+    column-gap: 5px;
+    margin: 4px 0 4px 162px;
+    display: flex;
+}
+
+.add-photo-btn{
+    cursor: pointer;
+    color: var(--link-color, #3A3395);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.uploadString p{
+    color: var(--gray-600, #4B5563);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.formatImg{
+    margin-bottom: 0;
+    color: var(--gray-500, #6B7280);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+#myfile{
+    display: none;
+}
+
+.fileNameAndDel{
+    column-gap: 0;
+}
+
+.fileNameAndDel div{
+    display: flex;
+    column-gap: 8px;
+}
+
+.fileNameAndDel p{
+    margin-bottom: 0;
+}
+
+.delfile{
+    cursor: pointer;
+    color: var(--link-color, #3A3395);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.fileNameAndDel{
+    column-gap: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    padding: 13px 17px 12px 13px;
+    display: flex;
+}
+
+.hoverImage{
+    display: none;
+}
+
+.imgError{
+    position: absolute; display: none;
+ }
+
+.errorImg{
+    right: 15px;
+    bottom: 63px;
+    position: absolute;
+    display: block;
+}
+
+.errorImg2{
+    right: 15px;
+    bottom: 12px;
+    position: absolute;
+    display: block;
+}

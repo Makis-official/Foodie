@@ -1,0 +1,28 @@
+
+
+
+
+.companyAndIcons{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    padding: 35px 32px;
+}
+
+.companyName{
+    color: var(--gray-400, #9CA3AF);
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.icons{
+    display: flex;
+    column-gap: 24px;
+}
+
+a{
+    cursor: pointer;
+}

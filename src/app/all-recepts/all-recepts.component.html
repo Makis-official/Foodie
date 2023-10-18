@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<ngb-toast *ngIf="tost" style="position: fixed; z-index: 10; top: 10px; right: 10px; padding: 2px 5px;" [delay]="3000" [autohide]="true">
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; column-gap: 12px;">
+            <img style="margin-top: 1px; width: 18px; height: 18px;" src="../../assets/comoleteSub.svg" alt="">
+            <div class="subNotification">
+            <p class="TitleSubNot">Добавлено в избранное</p>   
+            <p class="descSubNot">Сохранили этот рецепт для вас</p> 
+            </div>
+        </div>
+        <button (click)="close()" type="button" aria-label="Close" class="btn-close"></button>
+    </div>  
+</ngb-toast> 
+
+<div class="bestRecepts_cards">
+
+    <div  class="bestRecepts_cards_oneCard" *ngFor="let recepts of allRec">
+        <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="serv.colors[recepts.id]"><img class="heartSub" src="../../assets/Heart.svg" alt=""></button>
+        <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="!serv.colors[recepts.id]"><img class="heartSub" src="../../assets/HeartNoActive.svg" alt=""></button>
+   
+        <div routerLink="{{recepts.id}}">
+            <div class="checHeart">
+                <img src="../../assets/Ellipse.svg" alt="">
+
+                <div class="check">
+                    <img class="heartCheck" src="../../assets/Heart.svg" alt="">
+                </div>  
+            </div>
+
+            <img class="bestRecepts_cards_oneCard_img" [src]="recepts.image" alt="">
+            <p class="bestRecepts_cards_oneCard_title">{{recepts.title}}</p>
+
+            <div class="timeAndType">
+                <div class="time">
+                    <img src="../../assets/Timer.svg" alt="">
+                    <p class="timeType">{{recepts.timeCooking}} минут</p> 
+                </div>
+                    
+                <div class="time">
+                    <img src="../../assets/ForkKnife.svg" alt="">
+                    <p class="timeType">{{recepts.tags}}</p> 
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

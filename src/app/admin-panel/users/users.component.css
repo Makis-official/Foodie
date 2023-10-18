@@ -1,0 +1,79 @@
+.table{
+    width: 1280px;
+    margin: 50px auto 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    padding: 0 24px 0 24px;
+}
+
+.thead{
+    background-color: var(--gray-50, #F9FAFB);
+}
+
+th{
+    background: var(--gray-50, #F9FAFB);
+    color: var(--gray-500, #6B7280);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.status{
+    margin: 26px 0;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: var(--green-100, #D1FAE5);
+    border: none;
+
+    color: var(--green-800, #065F46);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.role{
+    margin: 26px 0;
+
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.edit{
+    margin: 26px 0;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+
+    color: var(--link-color, #3A3395);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.loginName{
+    margin-bottom: 0;
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+.userImg{
+    border-radius: 20px; 
+    width: 40px; 
+    height: 40px; 
+    margin: auto 0;
+}
+
+.tdUser{
+    padding-left: 24px; 
+    display: flex; 
+    column-gap: 16px; 
+    height: 89px;
+}

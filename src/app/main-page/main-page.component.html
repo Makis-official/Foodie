@@ -1,0 +1,245 @@
+<app-header></app-header>
+
+<ngb-toast *ngIf="tost" style="position: fixed; z-index: 10; top: 10px; right: 10px; padding: 2px 5px;" [delay]="3000" [autohide]="true">
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; column-gap: 12px;">
+            <img style="margin-top: 1px; width: 18px; height: 18px;" src="../../assets/comoleteSub.svg" alt="">
+            <div class="subNotification">
+                <p class="TitleSubNot">Добавлено в избранное</p>   
+                <p class="descSubNot">Сохранили этот рецепт для вас</p> 
+            </div>
+        </div>
+        <button (click)="close()" type="button" aria-label="Close" class="btn-close"></button>
+    </div>  
+</ngb-toast> 
+
+<main style="display: flex; justify-content: space-between;">
+    <img src="../../assets/leftCarusel.svg" alt="">
+
+    <carousel [interval]=5000 [(activeSlide)]="activeSlideIndex" >
+        <slide *ngFor="let slide of favoritePost">
+            <div class="bigBanner">
+                <div class="bigBanner_allInf">
+                    <p class="allInfTitle">
+                        {{slide.title}}
+                    </p>
+
+                    <p class="allInfDescription">
+                        {{slide.body}}
+                    </p>
+
+                    <div class="allInf_timeAndType">
+                            <div class="time Type">
+                                <img src="../../assets/Timer.svg" alt="">
+                                <p class="timeType">{{slide.timeCooking}} минут</p> 
+                            </div>
+                                
+                            <div class="time Type">
+                                <img src="../../assets/ForkKnife.svg" alt="">
+                                <p class="timeType">{{slide.tags}}</p> 
+                            </div>
+                    </div>
+
+                    <div class="allInf_userAndBtn">
+                        <div class="allInf_user">
+                            <img class="user_img" [src]="slide.user.image" alt="">
+
+                            <div class="allInf_user_inf">
+                                <p class="user_inf_name">{{slide.user.name}}</p>
+                                <p class="user_inf_date">{{slide.user.date | date:"d MMMM y"}}</p>
+                            </div>
+                        </div>
+
+                        <button routerLink="recipe/{{slide.id}}" class="allInf_Btn">Посмотреть <img src="../../assets/PlayCircle.svg" alt=""></button>
+                    </div>
+                </div>
+                <img class="big_img_banner" [src]="slide.image" alt="image slide">
+            </div>  
+        </slide>
+    </carousel>
+
+    <img src="../../assets/rightCorusel.svg" alt="">
+</main>
+
+<div class="bestRecepts">
+    <p class="bestRecepts_title">Лучшие рецепты</p>
+    <p class="bestRecepts_description">На нашем сайте вы найдете лучшие рецепты, которые помогут вам создавать великолепные блюда и порадовать своих близких и гостей своим кулинарным мастерством.</p>
+
+    <div class="bestRecepts_cards">
+
+        <div class="bestRecepts_cards_oneCard" *ngFor="let recepts of BestRecept | slice:0:3">
+            <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/Heart.svg" alt=""></button>
+            <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="!postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/HeartNoActive.svg" alt=""></button>
+
+            <div routerLink="recipe/{{recepts.id}}">
+                <img class="bestRecepts_cards_oneCard_img" [src]="recepts.image" alt="">
+                <p class="bestRecepts_cards_oneCard_title">{{recepts.title}}</p>
+
+                <div class="timeAndType">
+                    <div class="time">
+                        <img src="../../assets/Timer.svg" alt="">
+                        <p class="timeType">{{recepts.timeCooking}} минут</p> 
+                    </div>
+                        
+                    <div class="time">
+                        <img src="../../assets/ForkKnife.svg" alt="">
+                        <p class="timeType">{{recepts.tags}}</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="otherbestRecepts" (click)="otherRecepts()" *ngIf="otherBestrecept_btn">Посмотреть еще</button>
+    </div>
+    
+    <ng-container *ngIf="otherBestrecept">
+        <div class="bestRecepts_cards">
+            <div class="bestRecepts_cards_oneCard" *ngFor="let recepts of BestRecept | slice:3:6">
+                <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/Heart.svg" alt=""></button>
+                <button class="btnHeart" (click)="subRecept(recepts.id, recepts.title)" *ngIf="!postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/HeartNoActive.svg" alt=""></button>
+    
+                <div routerLink="recipe/{{recepts.id}}">
+                                <img class="bestRecepts_cards_oneCard_img" [src]="recepts.image" alt="">
+                <p class="bestRecepts_cards_oneCard_title">{{recepts.title}}</p>
+    
+    
+                <div class="timeAndType">
+                    <div class="time">
+                        <img src="../../assets/Timer.svg" alt="">
+                        <p class="timeType">{{recepts.timeCooking}} минут</p> 
+                    </div>
+                        
+                    <div class="time">
+                        <img src="../../assets/ForkKnife.svg" alt="">
+                        <p class="timeType">{{recepts.tags}}</p> 
+                    </div>
+    
+                </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+  
+</div>
+
+<hr align="center" width="100%" size="1" color="#D1D5DB" style="margin-top: 100px;"/>
+
+<div class="FourRcepts">
+    <div class="titleAndDescription">
+        <p class="title">Попробуйте эти вкусные рецепты</p>
+        <p class="description">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim</p>
+    </div>
+
+    <div class="fourRandRecepts_cards">     
+        <div class="fourRandRecepts_cards_oneCard" *ngFor="let recepts of FourRecept">
+
+            <button class="btnHeartMiniCard" (click)="subRecept(recepts.id, recepts.title)" *ngIf="postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/Heart.svg" alt=""></button>
+            <button class="btnHeartMiniCard" (click)="subRecept(recepts.id, recepts.title)" *ngIf="!postServ.colors[recepts.id]"><img class="heartSub" src="../../assets/HeartNoActive.svg" alt=""></button>
+    
+            <div routerLink="recipe/{{recepts.id}}">
+                <img class="fourRandRecepts_cards_oneCard_img" [src]="recepts.image" alt="">
+                <p class="fourRandRecepts_cards_oneCard_title">{{recepts.title}}</p>
+        
+                <div class="timeAndType">
+                    <div class="time">
+                        <img src="../../assets/Timer.svg" alt="">
+                        <p class="timeType">{{recepts.timeCooking}} минут</p> 
+                    </div>
+                            
+                    <div class="time">
+                        <img src="../../assets/ForkKnife.svg" alt="">
+                        <p class="timeType">{{recepts.tags}}</p> 
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr align="center" width="100%" size="1" color="#D1D5DB" style="margin-top: 150px;"/>
+
+<div class="whyWe">
+    <p class="whyWeTitle">Почему именно мы?</p>
+
+    <div class="whyWeFourColumns">
+        <div class="oneColumns">
+            <img class="oneColumnsImg" src="../../assets/Check.svg" alt="">
+            <div class="titleAndCheck">
+                <p class="oneColumnsTitle">Проверенные рецепты</p>
+                <p class="oneColumnsDescription">Вы можете найти множество проверенных рецептов, которые помогут вам приготовить вкусные и разнообразные блюда для всей семьи.</p>
+            </div>    
+        </div>
+
+        <div class="oneColumns">
+            <img class="oneColumnsImg" src="../../assets/Check.svg" alt="">
+            <div class="titleAndCheck">
+                <p class="oneColumnsTitle">Для всех</p>
+                <p class="oneColumnsDescription">Вы сможете найти легкие и вкусные блюда, которые понравятся и детям, и взрослым.</p>
+            </div>    
+        </div>
+
+        <div class="oneColumns">
+            <img class="oneColumnsImg" src="../../assets/Check.svg" alt="">
+            <div class="titleAndCheck">
+                <p class="oneColumnsTitle">Огромное разнообразие</p>
+                <p class="oneColumnsDescription">Разнообразие рецептов для всех порадует самых разносторонних гурманов</p>
+            </div>    
+        </div>
+
+        <div class="oneColumns">
+            <img class="oneColumnsImg" src="../../assets/Check.svg" alt="">
+            <div class="titleAndCheck">
+                <p class="oneColumnsTitle">Храним рецепты для вас</p>
+                <p class="oneColumnsDescription">Это отличный способ организовать и хранить свою коллекцию кулинарных рецептов. Вместо того, чтобы хранить бумажные копии или оставлять их в разных кулинарных книгах.</p>
+            </div>    
+        </div>
+    </div>
+</div>
+
+<div class="subscribeEmail">
+    <div class="subscribeEmailText">
+        <div class="subscribeEmailTitle">
+            Хотите получать новые рецепты?
+        </div>
+        <div class="subscribeEmailDescription">
+            Не пропустите ни одного вкусного рецепта! Подпишитесь на нашу рассылку, чтобы получать новые кулинарные идеи и рецепты прямо в свою почту.
+        </div>
+    </div>
+
+    <div class="inputEmailAndButton">
+        <input 
+            type="url" 
+            [ngClass]="{'is-invalid': emailSub.hasError('minlength')}"
+            class="inputEmail"
+            #emailSub="ngModel" 
+            [(ngModel)]="email"
+            type="text" 
+            minlength="1"
+            placeholder="Введите ваш email..."
+            required
+        >
+        <button [disabled]="emailSub.invalid" (click)="subscribe()" class="subscribeBtn">Подписаться</button>
+    </div>
+</div>
+
+
+
+<div style="position: relative; ">
+    <ng-container *ngIf="DivVisible">
+        <div class="banner">
+            <div class="bannerInf">
+                <div class="">
+                    <img style="width: 18px; height: 18px; margin: auto 0;" src="../../assets/roopor.svg" alt="">
+                    <p class="titleFooterBanner">Хорошие новости! Мы открыли наш интернет-магазин</p>
+                </div>
+                <img (click)="closeBanner()" style="cursor: pointer; width: 12px; height: 18px; margin: auto 0;" src="../../assets/esc.svg" alt="">                    
+            </div>
+
+        </div>
+    </ng-container>
+
+    <app-footer></app-footer>
+</div>
+

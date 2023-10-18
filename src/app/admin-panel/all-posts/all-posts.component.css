@@ -1,0 +1,138 @@
+::ng-deep .modal-body{
+    width: 512px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+::ng-deep .modal-sm{
+    border: none;
+    margin-top: 20.5%;
+    --bs-modal-width: 512px;
+}
+
+.modalContent{
+    display: flex;
+    column-gap: 16px;
+}
+
+.modalContent img{
+    width: 40px;
+    height: 40px;
+}
+
+.modalContent_text_title{
+    color: var(--gray-900, #111827);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.modalContent_text_body{
+    margin-top: 8px;
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.modal_buttons{
+    float: right;
+    margin-top: 28px;
+    display: flex;
+    column-gap: 12px;
+}
+
+.btn_close{
+    
+    padding: 9px 17px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+}
+
+.btn_share{
+    border: none;
+    color: white;
+    padding: 9px 17px;
+    border-radius: 6px;
+    background: var(--red-color, #DD0035);
+}
+
+.table{
+    width: 1280px;
+    margin: 50px auto 0;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200, #E5E7EB);
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    padding: 0 24px 0 24px;
+}
+
+.tbl_two{
+    margin-top: 87px;
+}
+
+.thead{
+    background-color: var(--gray-50, #F9FAFB);
+}
+
+th{
+    background: var(--gray-50, #F9FAFB);
+    color: var(--gray-500, #6B7280);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.receptTitle{
+    width: 260px;
+    padding: 0 12px 0 24px;
+    vertical-align: middle;
+    color: var(--gray-900, #111827);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.receptBody{
+    vertical-align: middle;
+    width: 380px;
+    padding-right: 24px;
+
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.receptid{
+    vertical-align: middle;
+    width: 360px;
+
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.receptTags{
+    vertical-align: middle;
+    width: 140px;
+
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.receptEdit_td{
+    vertical-align: middle;
+}
+
+.receptEdit{
+    padding: 0 21px;
+    display: flex;
+    column-gap: 12px;
+}

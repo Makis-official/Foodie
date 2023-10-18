@@ -1,0 +1,125 @@
+.card_avtorization{
+    width: 448px;
+    padding: 32px 40px;
+    margin: 32px auto 240px;
+
+    border-radius: 8px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+}
+
+h1{
+    color: var(--gray-900, #111827);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+input{
+    border-radius: 6px;
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    height: 38px;
+    width: 100%;
+    padding-left: 13px;
+}
+
+.checkkk{
+    height: 16px;
+    width: 16px;
+    margin: auto 0;
+}
+
+.checkAndRegistration{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 24px 0;
+}
+
+p{
+    color: var(--gray-700, #374151);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.check{
+    display: flex;
+    column-gap: 8px;
+}
+
+.checkbox{
+    color: var(--gray-900, #111827);
+    font-weight: 400;
+    line-height: 20px; 
+    margin-bottom: 0;
+}
+
+button{
+    padding: 9px 167px;
+    border-radius: 6px;
+    background: var(--link-color, #3A3395);
+    border: none;
+
+    color: var(--white, #FFF);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.register{
+    color: var(--link-color, #3A3395);
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    text-decoration: none;
+}
+
+.OrString{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 24px 0;
+}
+
+.OrString_title{
+    margin-bottom: 0;
+    color: var(--gray-500, #6B7280);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.github{
+    border: 1px solid var(--gray-300, #D1D5DB);
+    background: var(--white, #FFF);
+    padding: 9px 173px;
+}
+
+.is-invalid{
+    border: 1.5px solid red;
+}
+
+.imgError{
+   position: absolute; display: none;
+}
+
+
+
+.errorImg{
+    right: 15px;
+    bottom: 32px;
+    position: absolute;
+    display: block;
+}
+
+.errorImg2{
+    right: 15px;
+    bottom: 9px;
+    position: absolute;
+    display: block;
+}
