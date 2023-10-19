@@ -75,14 +75,14 @@ export class MainPageComponent implements OnInit{
         {
           var rand = Math.floor(Math.random() * this.users.length);
           this.BestRecept.push(this.users[rand]);
-          console.log(this.BestRecept);
+          //console.log(this.BestRecept);
         }
 
         for(let i = 0; i < 4; i++)
         {
           var rand = Math.floor(Math.random() * this.users.length);
           this.FourRecept.push(this.users[rand]);
-          console.log(this.FourRecept);
+          //console.log(this.FourRecept);
         }
       }
     });
@@ -91,7 +91,7 @@ export class MainPageComponent implements OnInit{
 
   favoriteRecepts(){
     this.favoritePost = this.users.filter(todo => todo.favorite == true);
-    console.log('favorite',this.favoritePost);
+    //console.log('favorite',this.favoritePost);
   };
 
   close() {
