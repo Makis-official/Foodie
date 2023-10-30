@@ -101,7 +101,7 @@ main{
 }
 
 button{
-    Float: right;
+    float: right;
     padding: 13px 25px 13px 23px;
     margin-top: 50px;
     margin-bottom: 159px;
